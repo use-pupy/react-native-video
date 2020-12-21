@@ -39,8 +39,8 @@ public final class ExoPlayerView extends FrameLayout {
     private Context context;
     private ViewGroup.LayoutParams layoutParams;
 
-    private boolean useTextureView = true;
-    private boolean hideShutterView = false;
+    private boolean useTextureView = false;
+    private boolean hideShutterView = true;
 
     public ExoPlayerView(Context context) {
         this(context, null);
@@ -70,7 +70,7 @@ public final class ExoPlayerView extends FrameLayout {
 
         shutterView = new View(getContext());
         shutterView.setLayoutParams(layoutParams);
-        shutterView.setBackgroundColor(ContextCompat.getColor(context, android.R.color.black));
+        shutterView.setBackgroundColor(ContextCompat.getColor(context, android.R.color.transparent));
 
         subtitleLayout = new SubtitleView(context);
         subtitleLayout.setLayoutParams(layoutParams);
